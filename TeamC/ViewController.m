@@ -14,8 +14,10 @@
 
 @implementation ViewController{
     CLLocationManager *locationManager;
-
+    CGSize windowSize;
+    MKMapView *mapview;
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,6 +28,8 @@
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    windowSize = [[UIScreen mainScreen] bounds].size;
+    [self setMapView];
     
     [locationManager requestWhenInUseAuthorization];
     [locationManager requestAlwaysAuthorization];
