@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <MapKit/MapKit.h>
+#import <NTYCSVTable.h>
 
 @interface ViewController ()<MKMapViewDelegate,UISearchBarDelegate>
 @end
@@ -42,6 +43,7 @@
     [self setMapView];
     [self SetSearchBar];
 }
+
 /*処理*/
 //取得したとき
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
