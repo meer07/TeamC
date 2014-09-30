@@ -15,6 +15,7 @@
 
 @implementation ViewController{
     CLLocationManager *locationManager;
+    NSMutableArray *teien,*musium,*jizou;
     UISearchBar *searchBar;
     CGSize windowSize;
     MKMapView *mapview;
@@ -42,11 +43,11 @@
     windowSize = [[UIScreen mainScreen] bounds].size;
     [self setMapView];
     [self SetSearchBar];
-    [self getDataFromCSV:@"teien"];
-    [self getDataFromCSV:@"musium"];
-    [self getDataFromCSV:@"jizou"];
-    NSLog(@"teien = %@, musium = %@, jiozu = %@",[self getDataFromCSV:@"teien"],[self getDataFromCSV:@"musium"],[self getDataFromCSV:@"jizou"]);
+    teien = [self getDataFromCSV:@"teien"];
+    musium = [self getDataFromCSV:@"musium"];
+    jizou = [self getDataFromCSV:@"jizou"];
     
+    [self setPinOn:teien];
 }
 
 -(NSMutableArray *)getDataFromCSV:(NSString *)csvFileName
@@ -142,5 +143,17 @@
 
 -(void)searchBarCancelButtonClicked:(UISearchBar*)searchBar{
     [searchBar resignFirstResponder];
+}
+
+-(void)setPinOn:(NSMutableArray *)array{
+    for (int i = 1; i < array.count; i++) {
+        NSMutableArray *dataArray = (NSMutableArray *)array[i];
+        MKPointAnnotation *pin = [MKPointAnnotation new];
+        pin.title = (NSString *)dataArray[1];
+        float longitude = ((NSString *)dataArray[3]).floatValue;
+        float latitude = ((NSString *)dataArray[4]).floatValue;
+        pin.coordinate = CLLocationCoordinate2DMake(latitude, longitude);
+        [mapview addAnnotation:pin];
+    }
 }
 @end
