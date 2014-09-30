@@ -16,6 +16,10 @@
 		9F6F8A0F19DA53FD00F23A71 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F6F8A0D19DA53FD00F23A71 /* LaunchScreen.xib */; };
 		9F6F8A1B19DA53FD00F23A71 /* TeamCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F8A1A19DA53FD00F23A71 /* TeamCTests.m */; };
 		9FB7CDF719DAA3420057D93E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB7CDF619DAA3420057D93E /* DetailViewController.m */; };
+		BFD11DB47578CA262C2B83A9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D5ADB305995FA6A2936D52 /* libPods.a */; };
+		E280122B19DAA3410023173B /* jizou.csv in Resources */ = {isa = PBXBuildFile; fileRef = E280122819DAA3410023173B /* jizou.csv */; };
+		E280122C19DAA3410023173B /* musium.csv in Resources */ = {isa = PBXBuildFile; fileRef = E280122919DAA3410023173B /* musium.csv */; };
+		E280122D19DAA3410023173B /* teien.csv in Resources */ = {isa = PBXBuildFile; fileRef = E280122A19DAA3410023173B /* teien.csv */; };
 		E2882FA919DA6DCA00B16CB4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2882FA819DA6DCA00B16CB4 /* CoreLocation.framework */; };
 		E2882FAA19DA6E4700B16CB4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2882FA619DA6DC100B16CB4 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -50,6 +54,10 @@
 		9F6F8A1A19DA53FD00F23A71 /* TeamCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamCTests.m; sourceTree = "<group>"; };
 		9FB7CDF519DAA3420057D93E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		9FB7CDF619DAA3420057D93E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A665748C1D6219326EA267F4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E280122819DAA3410023173B /* jizou.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jizou.csv; sourceTree = "<group>"; };
+		E280122919DAA3410023173B /* musium.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = musium.csv; sourceTree = "<group>"; };
+		E280122A19DAA3410023173B /* teien.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = teien.csv; sourceTree = "<group>"; };
 		E2882FA619DA6DC100B16CB4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E2882FA819DA6DCA00B16CB4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
