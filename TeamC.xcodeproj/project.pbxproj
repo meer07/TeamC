@@ -14,6 +14,8 @@
 		9F6F8A0C19DA53FD00F23A71 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6F8A0B19DA53FD00F23A71 /* Images.xcassets */; };
 		9F6F8A0F19DA53FD00F23A71 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F6F8A0D19DA53FD00F23A71 /* LaunchScreen.xib */; };
 		9F6F8A1B19DA53FD00F23A71 /* TeamCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F8A1A19DA53FD00F23A71 /* TeamCTests.m */; };
+		E2882FA919DA6DCA00B16CB4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2882FA819DA6DCA00B16CB4 /* CoreLocation.framework */; };
+		E2882FAA19DA6E4700B16CB4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2882FA619DA6DC100B16CB4 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		9F6F8A1419DA53FD00F23A71 /* TeamCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6F8A1919DA53FD00F23A71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F6F8A1A19DA53FD00F23A71 /* TeamCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamCTests.m; sourceTree = "<group>"; };
+		E2882FA619DA6DC100B16CB4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E2882FA819DA6DCA00B16CB4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2882FAA19DA6E4700B16CB4 /* MapKit.framework in Frameworks */,
+				E2882FA919DA6DCA00B16CB4 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,8 @@
 		9F6F89F219DA53FD00F23A71 = {
 			isa = PBXGroup;
 			children = (
+				E2882FA819DA6DCA00B16CB4 /* CoreLocation.framework */,
+				E2882FA619DA6DC100B16CB4 /* MapKit.framework */,
 				9F6F89FD19DA53FD00F23A71 /* TeamC */,
 				9F6F8A1719DA53FD00F23A71 /* TeamCTests */,
 				9F6F89FC19DA53FD00F23A71 /* Products */,
@@ -346,6 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TeamC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -356,6 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TeamC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -414,6 +424,7 @@
 				9F6F8A2019DA53FD00F23A71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F6F8A2119DA53FD00F23A71 /* Build configuration list for PBXNativeTarget "TeamCTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +433,7 @@
 				9F6F8A2319DA53FD00F23A71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
