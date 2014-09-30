@@ -9,13 +9,15 @@
 #import "ViewController.h"
 #import <MapKit/MapKit.h>
 
-@interface ViewController ()<MKMapViewDelegate>
+@interface ViewController ()<MKMapViewDelegate,UISearchBarDelegate>
 @end
 
 @implementation ViewController{
     CLLocationManager *locationManager;
+    UISearchBar *searchBar;
     CGSize windowSize;
     MKMapView *mapview;
+    NSString *searchword;
     float longitude,latitude;
 }
 
@@ -38,6 +40,7 @@
     
     windowSize = [[UIScreen mainScreen] bounds].size;
     [self setMapView];
+    [self SetSearchBar];
 }
 /*処理*/
 //取得したとき
@@ -83,5 +86,27 @@
     cr.span.latitudeDelta = 0.5;
     cr.span.longitudeDelta = 0.5;
     [mapview setRegion:cr animated:NO];
+}
+
+-(void)SetSearchBar{
+    searchBar = [[UISearchBar alloc] init];
+    //id view = [searchBar.subviews objectAtIndex:0];
+    //[view setHidden:YES];
+    searchBar.delegate = self;
+    searchBar.keyboardType = UIKeyboardTypeDefault;
+    searchBar.showsCancelButton = YES;
+    searchBar.barStyle = UIBarStyleDefault;
+    //searchBar.tintColor = [UIColor clearColor];
+    searchBar.frame = CGRectMake(0, 0, 320, 60);
+    [self.view addSubview:searchBar];
+}
+
+- (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *) searchText {
+    searchword = searchText;
+    NSLog(@"%@",searchword);
+}
+
+-(void)searchBarCancelButtonClicked:(UISearchBar*)searchBar{
+    [searchBar resignFirstResponder];
 }
 @end
