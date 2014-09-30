@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <MapKit/MapKit.h>
+#import <NTYCSVTable.h>
 
 @interface ViewController ()<MKMapViewDelegate>
 @end
@@ -38,7 +39,40 @@
     
     windowSize = [[UIScreen mainScreen] bounds].size;
     [self setMapView];
+    [self getDataFromCSV:@"teien"];
+    [self getDataFromCSV:@"musium"];
+    [self getDataFromCSV:@"jizou"];
+    NSLog(@"teien = %@, musium = %@, jiozu = %@",[self getDataFromCSV:@"teien"],[self getDataFromCSV:@"musium"],[self getDataFromCSV:@"jizou"]);
+    
 }
+
+-(NSMutableArray *)getDataFromCSV:(NSString *)csvFileName
+{
+    // CSVファイルからセクションデータを取得する
+    NSString *csvFile = [[NSBundle mainBundle] pathForResource:csvFileName ofType:@"csv"];
+    NSData *csvData = [NSData dataWithContentsOfFile:csvFile];
+    NSString *csv = [[NSString alloc] initWithData:csvData encoding:NSUTF8StringEncoding];
+    
+    NSScanner *scanner = [NSScanner scannerWithString:csv];
+    // 改行文字の選定
+    NSCharacterSet *chSet = [NSCharacterSet newlineCharacterSet];
+    NSString *line;
+    
+    // レコードを入れる NSMutableArray
+    NSMutableArray *row = [NSMutableArray array];
+    
+    while (![scanner isAtEnd]) {
+        // 一行づつ読み込んでいく
+        [scanner scanUpToCharactersFromSet:chSet intoString:&line];
+        NSArray *array = [line componentsSeparatedByString:@","];
+        [row addObject:array];
+        
+        // 改行文字をスキップ
+        [scanner scanCharactersFromSet:chSet intoString:NULL];
+    }
+    return row;
+}
+
 /*処理*/
 //取得したとき
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
