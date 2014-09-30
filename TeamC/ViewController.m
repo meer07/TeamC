@@ -16,6 +16,7 @@
     CLLocationManager *locationManager;
     CGSize windowSize;
     MKMapView *mapview;
+    float longitude,latitude;
 }
 
 
@@ -28,8 +29,6 @@
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-    windowSize = [[UIScreen mainScreen] bounds].size;
-    [self setMapView];
     
     [locationManager requestWhenInUseAuthorization];
     [locationManager requestAlwaysAuthorization];
@@ -37,17 +36,19 @@
     //位置情報取得開始
     [locationManager startUpdatingLocation];
     
-    
+    windowSize = [[UIScreen mainScreen] bounds].size;
+    [self setMapView];
 }
 /*処理*/
 //取得したとき
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    longitude = newLocation.coordinate.longitude;
+    latitude = newLocation.coordinate.latitude;
     
     NSLog(@"%f",newLocation.coordinate.longitude);
     NSLog(@"%f",newLocation.coordinate.latitude);
-    
-    
 }
+
 //位置取得失敗
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     //エラーに応じてUIAlertを提示
@@ -71,15 +72,14 @@
 
 -(void)setMapView{
     mapview = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, windowSize.width, windowSize.height)];
-    [self.view addSubview:mapview];
-    
+    mapview.showsUserLocation = YES;
+    [mapview setUserTrackingMode:MKUserTrackingModeFollow];
     [self setMapRegion];
     [self.view addSubview:mapview];
 }
 
 -(void)setMapRegion{
     MKCoordinateRegion cr = mapview.region;
-    //cr.center = co
     cr.span.latitudeDelta = 0.5;
     cr.span.longitudeDelta = 0.5;
     [mapview setRegion:cr animated:NO];
