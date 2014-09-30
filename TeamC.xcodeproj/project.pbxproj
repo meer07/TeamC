@@ -15,6 +15,7 @@
 		9F6F8A0C19DA53FD00F23A71 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6F8A0B19DA53FD00F23A71 /* Images.xcassets */; };
 		9F6F8A0F19DA53FD00F23A71 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F6F8A0D19DA53FD00F23A71 /* LaunchScreen.xib */; };
 		9F6F8A1B19DA53FD00F23A71 /* TeamCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F8A1A19DA53FD00F23A71 /* TeamCTests.m */; };
+		9FB7CDF719DAA3420057D93E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB7CDF619DAA3420057D93E /* DetailViewController.m */; };
 		E2882FA919DA6DCA00B16CB4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2882FA819DA6DCA00B16CB4 /* CoreLocation.framework */; };
 		E2882FAA19DA6E4700B16CB4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2882FA619DA6DC100B16CB4 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,8 @@
 		9F6F8A1419DA53FD00F23A71 /* TeamCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6F8A1919DA53FD00F23A71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F6F8A1A19DA53FD00F23A71 /* TeamCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamCTests.m; sourceTree = "<group>"; };
+		9FB7CDF519DAA3420057D93E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		9FB7CDF619DAA3420057D93E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		E2882FA619DA6DC100B16CB4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E2882FA819DA6DCA00B16CB4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -98,6 +101,8 @@
 				9F6F8A0319DA53FD00F23A71 /* AppDelegate.m */,
 				9F6F8A0519DA53FD00F23A71 /* ViewController.h */,
 				9F6F8A0619DA53FD00F23A71 /* ViewController.m */,
+				9FB7CDF519DAA3420057D93E /* DetailViewController.h */,
+				9FB7CDF619DAA3420057D93E /* DetailViewController.m */,
 				9F6F8A0819DA53FD00F23A71 /* Main.storyboard */,
 				9F6F8A0B19DA53FD00F23A71 /* Images.xcassets */,
 				9F6F8A0D19DA53FD00F23A71 /* LaunchScreen.xib */,
@@ -232,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB7CDF719DAA3420057D93E /* DetailViewController.m in Sources */,
 				9F6F8A0719DA53FD00F23A71 /* ViewController.m in Sources */,
 				9F6F8A0419DA53FD00F23A71 /* AppDelegate.m in Sources */,
 				9F6F8A0119DA53FD00F23A71 /* main.m in Sources */,

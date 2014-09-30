@@ -10,7 +10,6 @@
 #import <MapKit/MapKit.h>
 
 @interface CustomAnnotation : NSObject<MKAnnotation>{
-    
     NSString *title;
     NSString *subtitle;
 }
