@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F67032D19DA8B6800E8CA96 /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F67032C19DA8B6800E8CA96 /* CustomAnnotation.m */; };
 		9F6F8A0119DA53FD00F23A71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F8A0019DA53FD00F23A71 /* main.m */; };
 		9F6F8A0419DA53FD00F23A71 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F8A0319DA53FD00F23A71 /* AppDelegate.m */; };
 		9F6F8A0719DA53FD00F23A71 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F8A0619DA53FD00F23A71 /* ViewController.m */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F67032B19DA8B6800E8CA96 /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
+		9F67032C19DA8B6800E8CA96 /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
 		9F6F89FB19DA53FD00F23A71 /* TeamC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6F89FF19DA53FD00F23A71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F6F8A0019DA53FD00F23A71 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 		9F6F89FD19DA53FD00F23A71 /* TeamC */ = {
 			isa = PBXGroup;
 			children = (
+				9F67032B19DA8B6800E8CA96 /* CustomAnnotation.h */,
+				9F67032C19DA8B6800E8CA96 /* CustomAnnotation.m */,
 				9F6F8A0219DA53FD00F23A71 /* AppDelegate.h */,
 				9F6F8A0319DA53FD00F23A71 /* AppDelegate.m */,
 				9F6F8A0519DA53FD00F23A71 /* ViewController.h */,
@@ -230,6 +235,7 @@
 				9F6F8A0719DA53FD00F23A71 /* ViewController.m in Sources */,
 				9F6F8A0419DA53FD00F23A71 /* AppDelegate.m in Sources */,
 				9F6F8A0119DA53FD00F23A71 /* main.m in Sources */,
+				9F67032D19DA8B6800E8CA96 /* CustomAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

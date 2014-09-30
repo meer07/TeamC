@@ -7,9 +7,9 @@
 //
 
 #import "ViewController.h"
+#import <MapKit/MapKit.h>
 
-@interface ViewController ()
-
+@interface ViewController ()<MKMapViewDelegate>
 @end
 
 @implementation ViewController{
@@ -65,4 +65,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)setMapView{
+    mapview = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, windowSize.width, windowSize.height)];
+    [self.view addSubview:mapview];
+    
+    [self setMapRegion];
+    [self.view addSubview:mapview];
+}
+
+-(void)setMapRegion{
+    MKCoordinateRegion cr = mapview.region;
+    //cr.center = co
+    cr.span.latitudeDelta = 0.5;
+    cr.span.longitudeDelta = 0.5;
+    [mapview setRegion:cr animated:NO];
+}
 @end
